@@ -1,0 +1,284 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>不求甚解學經濟 - Brandon Song Li 的經濟學學習筆記</title><meta name="author" content="Brandon Song Li"><meta name="copyright" content="Brandon Song Li"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="不求甚解學經濟">
+<meta property="og:url" content="https://brandonsli.com/index.html">
+<meta property="og:site_name" content="不求甚解學經濟">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://brandonsli.com/img/android-chrome-512x512.png">
+<meta property="article:author" content="Brandon Song Li">
+<meta property="article:tag" content="Information Design, Mechanism Design, Game Theory, Mathematical Economics, Brandon Li, Brandon Song Li, 不求甚解學經濟, 李嵩, 不求甚解学经济, Song Li, Song, 西北大学, 复旦大学, 西安财经学院, 西安财经大学, 李嵩, Autonomous University of Barcelona, Barcelona School of Economics, UAB, UAB-IDEA">
+<meta name="twitter:card" content="true">
+<meta name="twitter:image" content="https://brandonsli.com/img/android-chrome-512x512.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "不求甚解學經濟",
+  "alternateName": [
+    "Brandon Song Li 的經濟學學習筆記",
+    "brandonsli.com"
+  ],
+  "url": "https://brandonsli.com/"
+}</script><link rel="shortcut icon" href="/img/android-chrome-512x512.png"><link rel="canonical" href="https://brandonsli.com/index.html"><link rel="preconnect" href="//cdnjs.cloudflare.com"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JPCYM6C58B"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-JPCYM6C58B')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-JPCYM6C58B', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '複製成功',
+    error: '複製失敗',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdnjs.cloudflare.com/ajax/libs/egjs-infinitegrid/4.13.0/infinitegrid.min.js',
+    buttonText: '載入更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '不求甚解學經濟',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="不求甚解學經濟" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="不求甚解學經濟" type="application/rss+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">載入中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      if ($loadingBox.classList.contains('loaded')) return
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+
+  if (document.readyState === 'complete') {
+    preloader.endLoading()
+  } else {
+    window.addEventListener('load', preloader.endLoading)
+    document.addEventListener('DOMContentLoaded', preloader.endLoading)
+    // Add timeout protection: force end after 7 seconds
+    setTimeout(preloader.endLoading, 7000)
+  }
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/android-chrome-512x512.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">49</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/index.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">不求甚解學經濟</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">不求甚解學經濟</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/p/0a743s09.html" title="随手记录"><i class="fas fa-thumbtack sticky"></i>随手记录</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2019-10-06T13:40:00.000Z" title="發表於 2019-10-06 21:40:00">2019-10-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%B8%8D%E6%B1%82%E7%94%9A%E8%A7%A3%E5%AD%B8%E7%B6%93%E6%BF%9F/">不求甚解學經濟</a></span></div><div class="content">随手记录  2026  2026.02.23 Yang, David Y. China: Autocracy 2.0. No. w32993. National Bureau of Economic Research, 2024. 2026.03.02 Hobbs, William R., and Margaret E. Roberts. “How sudden censorship can increase access to information.” American Political Science Review 112, no. 3 (2018): 621-636. 2026.03.09 Roberts, Margaret E. “Resilience to online censorship.” Annual Review of Political Science 23, no. 1 (2020): 401-419. 2026.03.09 Pan, Jennifer, Zijie Shao, and Yiqing Xu. “How government-contro...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/p/3e891b09.html" title="不求甚解學經濟-信息設計系列"><i class="fas fa-thumbtack sticky"></i>不求甚解學經濟-信息設計系列</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2021-06-02T09:34:33.000Z" title="發表於 2021-06-02 17:34:33">2021-06-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%BF%A1%E6%81%AF%E8%A8%AD%E8%A8%88/">信息設計</a></span></div><div class="content"> 目錄 序言 一: 貝葉斯勸說 二: 多個接收者1 三: 多個接收者2 四: 異質性先驗 五: 靜態目標的動態實施：固定狀態 六: 動態情形：外生可變狀態 七: 動態情形：內生可變狀態 八: 抗拒勸說 番外: Basic Cheap Talk 番外: Propaganda to Persuade 番外: The Persuasion Duality A1：信息的表示與比較 A2：一些賽侷理論 A3：一些簡單的凸分析 A4：一些簡單的概率論 A5：一些簡單的線性規劃 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/p/8ca4f9a7.html" title="經濟學隨想"><i class="fas fa-thumbtack sticky"></i>經濟學隨想</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2022-01-23T16:37:12.000Z" title="發表於 2022-01-24 00:37:12">2022-01-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%B8%8D%E6%B1%82%E7%94%9A%E8%A7%A3%E5%AD%B8%E7%B6%93%E6%BF%9F/">不求甚解學經濟</a></span></div><div class="content">這裡是一些經濟學隨想。  概念釐清 腐敗 以政治權力壟斷關鍵性行業 (例如電力、通信等) 也是一種腐敗。 規定/約定 “規定”是不值得遵守的，因為它是强權者單方面命令的。就算遵守了規定，也可能是出於無奈；如果不遵守規定，也未必是什麽可恥的行為； “約定”是值得遵守的，因為它是相關各方彼此之間做出的承諾。在理論上，法律應該屬於約定/契約的一種，而非屬於規定。 不配合 与上一條有相同之處。在指責別人不配合/不遵守規定之前，先要想一想，為什麽對方不願意配合/不願意遵守約定。 為什麽地方政府要隱瞞？如果地方政府如實匯報了會怎麽樣？ 為什麽人們不願意被帶走隔離/隱瞞行程？如果被帶走隔離了會怎麽樣？ 為什麽不願意配合呢？他們在規則或約定的指定中有發言權嗎？對於自己并未直接或間接參與制定的約定，他有義務遵守嗎？  說真話 需要强調的是“說真心話”，發乎真心；而不是“說真話”。真心話僅關乎是否發乎真心，可以允許受信息、知識或個人思維方式的限制所導致的言語與事實不符，也可以避免歪打正著地說違心話卻與事實相符。 關注現實 以可靠性存疑的數據為原材料、以掌握程度不純熟的方法為工具、回避關鍵性問題並重複...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/p/1da1ca28.html" title="数理经济学系列索引"><i class="fas fa-thumbtack sticky"></i>数理经济学系列索引</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2024-10-25T15:21:21.000Z" title="發表於 2024-10-25 23:21:21">2024-10-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%B8%8D%E6%B1%82%E7%94%9A%E8%A7%A3%E5%AD%B8%E7%B6%93%E6%BF%9F/">不求甚解學經濟</a></span></div><div class="content">已经断更好几年了，先做个索引。以后有时间可能会填一些坑，修正一些错误。 目錄 Berge’s Maximum Theorem 最大值定理 不动点定理系列: 斯拜纳引理 Sperner’s Lemma 不动点定理系列: KKM引理 不动点定理系列: 布劳威尔不动点定理 Brouwer’s Fixed Point Theorem 不动点定理系列: 角谷静夫不动点定理 Kakutani’s Fixed Point Theorem 不动点定理系列: 樊畿不等式 Ky Fan’s Minmax Inequality 不动点定理系列: 塔斯基不动点定理 Tarksi’s Fixed Point Theorem 一些簡單的單調比較靜態分析 一些簡單的線性規劃 一些簡單的凸分析 一些簡單的凸分析及其应用 </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/p/u7c42f13a.html" title="Infinite Tsukuyomi"><img class="post-bg" src="/img/Infinite-Tsukuyomi-Moon.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Infinite Tsukuyomi"></a></div><div class="recent-post-info"><a class="article-title" href="/p/u7c42f13a.html" title="Infinite Tsukuyomi">Infinite Tsukuyomi</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2026-07-26T23:30:00.000Z" title="發表於 2026-07-27 07:30:00">2026-07-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Information-Design/">Information Design</a></span></div><div class="content">Infinite Tsukuyomi (Academic version: Robust Narrative Persuasion.)  The Rinne Sharingan reflected on the moon sends one public pattern across the shinobi world. Every shinobi sees the same omen. Priors determine which dream-template becomes most plausible, so one field of moonlight produces individualized dreams.   Anime still: NARUTO Official Site. Madara casts a menu of dream-templates in the moonlight before the waking world reveals its next omen. Devastation and cooperation emerge from t...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/p/19890604.html" title="西班牙感想">西班牙感想</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2026-04-09T20:40:00.000Z" title="發表於 2026-04-10 04:40:00">2026-04-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9D%82%E6%84%9F/">杂感</a></span></div><div class="content">这是一些在西班牙的感想。 西班牙感想 总体感受 说实话我过得并不开心，我觉得因为我的性格年龄和处事方式以及成长的文化背景，再加上我不是欧洲人也不是南美人，我确实过得很不开心。   出国是我这么多年来一直以来的梦想，现在终于实现了，可是结果我并没有很开心。  （我已经来了西班牙两年，我还是不知道该如何回答 How are you 这个问题） 希望接下来会变得开心一些吧。 我觉得西班牙的文化高度依赖人际沟通和临场协商，缺乏清晰透明且自觉遵守的规则，有日常需要经历的事件里有大量都留下了需要临场协商的模糊地带。这种文化不太适合我。 我需要清晰、透明、正式、可预测的规则，（必须是正式规则，而不是大量依赖潜在规则），并且大家自觉遵守。这种文化环境也许存在于瑞士德语区、德国、奥地利或者北欧等地方，后面我可能搬去那些地方试试。那是那些地方又没有巴塞这么好的阳光的气候，这就要取决于人文环境和自然环境的权衡了。 毕竟世界这么大，文化也很多样。 大概这两年有如下这些观察和感想： 日常生活与公共空间 这里人们在点餐时会说拜托，购物付款或者拿到小票时会说感谢。我在看一个西语情景喜剧的时候发现，即使在气愤的...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/p/z7b881b90.html" title="The Self-Hacking Manual: Casting Kotoamatsukami on Oneself">The Self-Hacking Manual: Casting Kotoamatsukami on Oneself</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2025-07-14T06:58:15.000Z" title="發表於 2025-07-14 14:58:15">2025-07-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/The-Self-Hacking-Manual/">The Self-Hacking Manual</a></span></div><div class="content">The Self-Hacking Manual: Casting Kotoamatsukami on Oneself (update: an alternative version is now on SSRN Working Paper.)  Disclaimer: The quit‑smoking example is used solely to illustrate the methodology and does not constitute medical advice. Because I am not Uchiha Shisui, I cannot cast the authentic Kotoamatsukami, i.e. direct belief manipulation, on myself. However, thanks to the rise of Kagaku Ningu (Scientific Ninja Tools), namely the research of Schwartzstein &amp; Sunderam, “Using Mo...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/p/dd356338.html" title="Some Pedantic Things (that probably nobody cares)">Some Pedantic Things (that probably nobody cares)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2024-12-09T14:35:53.000Z" title="發表於 2024-12-09 22:35:53">2024-12-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%B8%8D%E6%B1%82%E7%94%9A%E8%A7%A3%E5%AD%B8%E7%B6%93%E6%BF%9F/">不求甚解學經濟</a></span></div><div class="content">Some Pedantic Things (that probably nobody cares) Some of those below are not necessarily mistakes, but it is better to be conceptually discriminating. Constant returns to scale and strict concavity are incompatible!!!  I never imagined that some basic concepts could confuse so many people, until I recently noticed certain mistakes appearing repeatedly. Perhaps this is because some classic references propagate these errors, and others simply adopt them without critically examining the logic. ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/p/9b881b90.html" title="一些簡單的凸分析及其应用">一些簡單的凸分析及其应用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2024-11-07T16:06:33.000Z" title="發表於 2024-11-08 00:06:33">2024-11-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%B8%8D%E6%B1%82%E7%94%9A%E8%A7%A3%E5%AD%B8%E7%B6%93%E6%BF%9F/">不求甚解學經濟</a></span></div><div class="content">一些簡單的凸分析及其应用 时隔两年多，恢复更新了。这是一些簡單的凸分析的续篇。 目前只是草稿，会有很多错误。 Don’t follow my arguments for now, it’s just a draft of a draft. 在这篇中，我们想用一套统一的凸分析工具，把高微（一）中消费者理论和厂商理论里常见的对象——支出函数、间接效用函数、成本函数、利润函数——的性质“打包”推一遍，尽量不靠背诵，而是从共轭与支撑函数定理出发统一推出。 更具体一点，我们的目标是：  从 concave / convex 指标函数（indicator functions）出发，引入 concave conjugate； 把支出函数、成本函数、利润函数都写成某个指标函数的共轭； 说明 Support Function Theorem、Conjugate Duality Theorem（Young–Fenchel）如何一锅端地产生 Shephard lemma、Hotelling lemma、Slutsky 矩阵等结论。  （间接效用函数稍微麻烦一些，这篇先主要讲支出 / 成本 / 利润。）...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/p/6f71e5af.html" title="網盤記錄">網盤記錄</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2023-02-22T12:19:30.000Z" title="發表於 2023-02-22 20:19:30">2023-02-22</time></span></div><div class="content">網盤記錄 記錄一下最近使用的網盤。  更新：使用了 Rclone 的加密以後應該都不成問題了。如果用 Alist 的話也是的。 可用的 這些是可以被納入考慮範圍的。 Nextcloud 正在使用。對（我這種）小白不算友好，但可以借機學習學習，可玩性高。很自主。 MEGA 正在使用。數據安全有保障，切記導出備份密鑰。數據默認加密。 不要貪圖淘寶之類的小便宜，能得到你用戶名密碼的人，也能導出你的備份密鑰;誰得到了你的備份密鑰，誰就是你的網盤的主人。即使你後面改了密碼、即使你開啟了雙重驗證，也沒用。備份密鑰擁有比雙重驗證更高的權限。 pCloud 暫時不用了。數據加密需額外訂閱。 等個好時機買個終身會員+加密，再用。黑五之類的會用優惠，那個時候購入才划算。 iceDrive 國內無法訂閱：沒有paypal和銀聯支持，當然更不可能有支付寶支持。 如果時機合適，iceDrive 和 pCloud 的終身訂閱同是備選方案。 Seafile 暫時存疑 不了解。 Owncloud (Infinite Scales) 待觀察 已搭建，但待觀察。 不在考慮範圍的 因各種原因被排除在考慮範圍之外。 G...</div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#content-inner">5</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/android-chrome-512x512.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Brandon Song Li</div><div class="author-info-description">教育即自由，學術即反抗，事實即顛覆</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">49</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">10</div></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">教育即自由，學術即反抗，事實即顛覆</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/p/19890604.html" title="西班牙感想">西班牙感想</a><time datetime="2026-11-22T06:13:57.034Z" title="更新於 2026-11-22 14:13:57">2026-11-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/p/0a743s09.html" title="随手记录">随手记录</a><time datetime="2026-11-17T15:57:17.151Z" title="更新於 2026-11-17 23:57:17">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/u7c42f13a.html" title="Infinite Tsukuyomi"><img src="/img/Infinite-Tsukuyomi-Moon.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Infinite Tsukuyomi"/></a><div class="content"><a class="title" href="/p/u7c42f13a.html" title="Infinite Tsukuyomi">Infinite Tsukuyomi</a><time datetime="2026-09-19T09:04:20.962Z" title="更新於 2026-09-19 17:04:20">2026-09-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/p/9b881b90.html" title="一些簡單的凸分析及其应用">一些簡單的凸分析及其应用</a><time datetime="2026-08-28T17:49:23.118Z" title="更新於 2026-08-29 01:49:23">2026-08-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/p/2b881b90.html" title="不求甚解學經濟-一些簡單的凸分析">不求甚解學經濟-一些簡單的凸分析</a><time datetime="2026-06-19T02:22:23.822Z" title="更新於 2026-06-19 10:22:23">2026-06-19</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分類</span>
+            <a class="card-more-btn" href="/categories/" title="檢視更多">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Information-Design/"><span class="card-category-list-name">Information Design</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/The-Self-Hacking-Manual/"><span class="card-category-list-name">The Self-Hacking Manual</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%8D%E6%B1%82%E7%94%9A%E8%A7%A3%E5%AD%B8%E7%B6%93%E6%BF%9F/"><span class="card-category-list-name">不求甚解學經濟</span><span class="card-category-list-count">22</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BF%A1%E6%81%AF%E8%A8%AD%E8%A8%88/"><span class="card-category-list-name">信息設計</span><span class="card-category-list-count">15</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/"><span class="card-category-list-name">技术</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9D%82%E6%84%9F/"><span class="card-category-list-name">杂感</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%8F%BE%E5%AF%A6%E9%97%9C%E6%B3%A8/"><span class="card-category-list-name">現實關注</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BF%BB%E8%AF%91/"><span class="card-category-list-name">翻译</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>標籤</span></div><div class="card-tag-cloud"><a href="/tags/The-Self-Hacking-Manual/" style="font-size: 1.1em; color: #999">The Self-Hacking Manual</a> <a href="/tags/Infinite-Tsukuyomi/" style="font-size: 1.1em; color: #999">Infinite Tsukuyomi</a> <a href="/tags/%E6%8A%80%E8%A1%93/" style="font-size: 1.1em; color: #999">技術</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>歸檔</span>
+      <a class="card-more-btn" href="/archives/"
+            title="檢視更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/07/">
+            <span class="card-archive-list-date">
+              七月 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/04/">
+            <span class="card-archive-list-date">
+              四月 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/07/">
+            <span class="card-archive-list-date">
+              七月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/12/">
+            <span class="card-archive-list-date">
+              十二月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/11/">
+            <span class="card-archive-list-date">
+              十一月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/10/">
+            <span class="card-archive-list-date">
+              十月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/02/">
+            <span class="card-archive-list-date">
+              二月 2023
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2022/03/">
+            <span class="card-archive-list-date">
+              三月 2022
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>網站資訊</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章數量 :</div><div class="item-count">49</div></div><div class="webinfo-item"><div class="item-name">訪客數 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">總瀏覽量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最後更新時間 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-11-22T06:28:38.530Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2019 - 2026 By Brandon Song Li</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日夜模式切換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到頂端"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="https://cdnjs.cloudflare.com/ajax/libs/busuanzi/2.3.0/bsz.pure.mini.js"></script></div></body></html>
